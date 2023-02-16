@@ -66,11 +66,11 @@ app.post("/feedback/", (req, res) => {
        console.log(question);
         axios.get(question)
       .then((respo) => {
-       // if(respo.data.type.'free'){
+       if(respo.data.type.'free'){
         qs.push({ id :respo.data.id, title:respo.data.title,des:respo.data.description,type : respo.data.type ,max:'' });
-       // }else{
-         // qs.push({ id :respo.data.id, title:respo.data.title,des:respo.data.description,type : 'number',max:'5' });
-       //// }
+        }else{
+          qs.push({ id :respo.data.id, title:respo.data.title,des:respo.data.description,type : 'number',max:'5' });
+        }
   
       })
       .catch((error) => {
