@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+   <style>
+   body{
+   margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 150px;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+h1{
+font-family:Source Sans Pro ;
+font-size: 30px;}
+h1,h2{
+text-align: center;
+color: SlateBlue;
+font-weight: bold;
+}
+h2{
+font-family: Tahoma;
+font_size: 22px;}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: DodgerBlue;
+}
+p,td,li{
+font-size: 20px;
+font-family: Times New Roman ;
+}
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+label{
+    
+font-size: 20px;
+font-family: Times New Roman ;
+}
+form,div {
+  display: block;
+  text-align: center;
+}
+.input, textarea {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px auto;
+  resize: none;
+}
+
+</style>
+
+<title>JAVA</title>
+ <!-- firstly i start learning algorithm and how it is work after that c language andd c++ then Java opp -->
+
+<body>
+<h1>JAVA</h1>
+<h2>Background</h2>
+<p>Firstly i start learning algorithm and how it is work after that c language andd c++ then Java opp ,JEE</p>
+<h2>Java Features:</h2>
+<ul>
+    <li>Simple.</li>
+    <li>Object-Oriented.</li>
+    <li>Portable.</li>
+    <li>Platform independent.</li>
+    <li>Secured.</li>
+    <li>Robust.</li>
+    <li>Architecture neutral.</li>
+    <li>Interpreted.</li>
+</ul>
+<h2>Comparation:</h2>
+<table>
+    <tr>
+    <td>PROS</td>
+    <td>Cons</td>
+  </tr>
+  <tr>
+    <td>Simple</td>
+    <td>Slow</td>
+  </tr>
+    <tr>
+    <td>Object-Oriented Programming Lang</td>
+    <td>Poor GUI</td>
+  </tr>
+ <tr>
+    <td>Secure Language</td>
+    <td>No backup</td>
+  </tr>
+ <tr>
+    <td>Economical</td>
+    <td>More Memory Required</td>
+  </tr>
+
+</table>
+<h2>Code sample:</h2>
+<div>
+    <img src="./Capture.PNG" width="500" height="300" class="center">
+</div>
+<h2>Conclution:</h2>
+<p>Java was for me a good choise because java is  open source and has a worldwide community invested in guiding its continued development and growth</p>
+<h2>Links:</h2>
+   <ol>
+<li><a href="https://www.w3schools.com/">W3Schools</a></li>
+
+<li><a href="https://www.java.com/fr/">Java Official site</a></li>
+</ol>
+<h2>Feedback:</h2>
+      <form id="form" action="/feedback" method="post" >
+        <label for="name">Full Name:</label>
+        <br>
+        <input class="input fname" type="text" id="name" name="name"  placeholder="Enter Your Full Name" value="{{name}}"/>
+         <br><label for="email">Email  Address:</label>
+        <input class="input email" type="email" id="email" name="email" placeholder="Enter Your Email" value="{{email}}"/>
+         <br><div style="padding: 10px">
+          <label for="OP">Selection:</label>
+<input type="radio" id="S" name="OP" value="S"><label >Student</label>
+<input type="radio" id="B"    name="OP" value="B"><label >Bachlor</label> </div>
+        <label for="fb">Your Feedback</label>
+        <textarea
+          id="fb" name="fb"
+          placeholder="Write your feedback about the page"
+          style="height: 200px"
+        >{{fb}}</textarea>
+        <button type="submit">Submit</button>
+        <bttomclass="btn" type="submit" value="Submit" />
+        
+        <div id=task >
+        {{#if message}}
+        <div>
+          <h2>{{ids}}</h2>
+          <h2>{{title}}</h2>
+          <h2>{{desc}}</h2>
+        </div>
+        {{#each qs}}
+        <h3>{{this.title}}</h3>
+			    <p>${{this.des}}</p>`
+          <input type="{{this.type}}" max="{{this.max}}" placeholder="Enter your answer"/>
+        {{/each}}
+        {{/if}}
+        </div>
+        <div id="tab">
+          
+            <table>
+    <tr>
+    <td>name</td>
+    <td>Feedback</td>
+  </tr>
+  {{#each users}}
+  
+  <tr>
+    <td>{{this.name}}</td>
+    <td>{{this.fb}}</td>
+  </tr>
+  
+
+ 
+
+  {{/each}}
+</table>
+  
+
+        </div>
+      </form>
+</body>
+</html>
